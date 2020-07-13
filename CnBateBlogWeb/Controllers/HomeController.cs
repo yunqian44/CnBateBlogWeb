@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CnBateBlogWeb.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+using CnBateBlogWeb.Common;
 
 namespace CnBateBlogWeb.Controllers
 {
@@ -23,7 +25,21 @@ namespace CnBateBlogWeb.Controllers
 
         public IActionResult Index()
         {
-            var s= $"当前系统处于什么环境，开发:{_env.IsDevelopment()}-----生成环境:{_env.IsProduction()}";
+            var environmentStr = string.Empty;
+            if (_env.IsDevelopment())
+            {
+                environmentStr += "开发环境";
+            }
+            else if (_env.IsProduction())
+            {
+                environmentStr += "生产环境";
+            }
+            else
+            {
+                environmentStr += "未知环境";
+            }
+            ViewBag.Environment = $"当前系统处于:{environmentStr}";
+            ViewBag.SqlServerConnection = $"{Appsettings.app("SqlServer", "SqlServerConnection")}";
             return View();
         }
 
