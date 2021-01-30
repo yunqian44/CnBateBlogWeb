@@ -25,6 +25,7 @@ namespace CnBateBlogWeb.Controllers
 
         public IActionResult Index()
         {
+            #region 开发/生产环境
             var environmentStr = string.Empty;
             if (_env.IsDevelopment())
             {
@@ -37,9 +38,14 @@ namespace CnBateBlogWeb.Controllers
             else
             {
                 environmentStr += "未知环境";
-            }
+            } 
+            #endregion
+
             ViewBag.Environment = $"当前系统处于:{environmentStr}";
             ViewBag.SqlServerConnection = $"{Appsettings.app("SqlServer", "SqlServerConnection")}";
+
+            ViewBag.Location = Environment.GetEnvironmentVariable("Location");
+
             return View();
         }
 
