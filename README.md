@@ -3,6 +3,7 @@
 # Setting up for web App on Linux or windows
 - Create a Web App on Linux or windows using CLI or Azure portal
 - Add an App Setting for your app
+
   ```PORT = 9021```
   ```Location = Asia/Singapore```
   ```ASPNETCORE_ENVIRONMENT = Development/Production```
@@ -10,6 +11,7 @@
 - Create a Web App on Linux using CLI or Azure portal
 - Configure your web app to custom image 
 - Add an App Setting for your app
+
   ```WEBSITES_PORT = 9021```
   ```Location = Asia/Singapore```
   ```ASPNETCORE_ENVIRONMENT = Development/Production```
