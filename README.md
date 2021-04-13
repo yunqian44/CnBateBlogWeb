@@ -1,5 +1,7 @@
 # CnBateBlogWeb
-💖 ASP.NET Core 3.1 Sample Deployed to Azure Web App Service[![Build Status](https://qianyun.visualstudio.com/CnBateBlogWeb/_apis/build/status/yunqian44.CnBateBlogWeb?branchName=master)](https://qianyun.visualstudio.com/CnBateBlogWeb/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://qianyun.visualstudio.com/CnBateBlogWeb/_apis/build/status/yunqian44.CnBateBlogWeb?branchName=master)](https://qianyun.visualstudio.com/CnBateBlogWeb/_build/latest?definitionId=1&branchName=master)
+
+💖 ASP.NET Core 3.1 Sample Deployed to Azure Web App Service
 # Setting up for web App on Linux or windows
 - Create a Web App on Linux or windows using CLI or Azure portal
 - Add an App Setting for your app
