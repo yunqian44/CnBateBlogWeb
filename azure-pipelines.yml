@@ -10,8 +10,8 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'fca0ee12-df4b-41ec-9c44-2478722405b1'
-  imageRepository: 'cnbateblogwebnetdemo'
+  dockerRegistryServiceConnection: 'bc751745-b64b-445f-b840-e516c4ed7cee'
+  imageRepository: 'appconfig'
   containerRegistry: 'appconfig.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
